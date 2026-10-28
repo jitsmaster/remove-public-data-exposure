@@ -13,7 +13,11 @@
     "format": "prettier --write .",
     "format:check": "prettier --check .",
     "icons": "node scripts/gen-icons.mjs",
-    "vapid": "pnpm --filter @rpde/server vapid"
+    "vapid": "pnpm --filter @rpde/server vapid",
+    "pii-scan": "node scripts/pii-scan.mjs",
+    "registry:data": "node scripts/import-badbool.mjs",
+    "registry:vendor": "node scripts/vendor-badbool.mjs",
+    "seed": "pnpm --filter @rpde/server seed"
   },
   "devDependencies": {
     "prettier": "^3.4.2",

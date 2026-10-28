@@ -1,0 +1,160 @@
+{
+  "source": {
+    "name": "Enforceable tier (hand-authored)",
+    "authority": "US federal law",
+    "note": "Not automatable by design. Credit freezes are identity-verified and interactive; the app's job is to sequence, instruct, and track them, not to pretend it can file them.",
+    "authoredFrom": [
+      "FCRA 15 U.S.C. §1681c-1 (security freezes, free since 2018)",
+      "FCRA 15 U.S.C. §1681b(e) (prescreened credit offers)",
+      "CFPB 2025 Consumer Reporting Company List"
+    ]
+  },
+  "entries": [
+    {
+      "id": "freeze-equifax",
+      "name": "Equifax security freeze",
+      "domain": "equifax.com",
+      "legalBasis": "FCRA §1681c-1",
+      "removes": "Blocks new creditors from pulling your Equifax file — the main lever against identity theft using your home address.",
+      "optOutUrl": "https://www.equifax.com/personal/credit-report-services/credit-freeze/",
+      "automation": "none-interactive",
+      "revocable": true,
+      "cost": "free",
+      "steps": [
+        "Freeze online — you will be identity-verified, so this cannot be automated",
+        "Record the freeze PIN; the app stores it in the device vault",
+        "Thaw temporarily (free) before applying for credit"
+      ]
+    },
+    {
+      "id": "freeze-experian",
+      "name": "Experian security freeze",
+      "domain": "experian.com",
+      "legalBasis": "FCRA §1681c-1",
+      "removes": "Blocks new creditors from pulling your Experian file.",
+      "optOutUrl": "https://www.experian.com/freeze/center.html",
+      "automation": "none-interactive",
+      "revocable": true,
+      "cost": "free",
+      "steps": ["Freeze online", "Record the PIN in the device vault"]
+    },
+    {
+      "id": "freeze-transunion",
+      "name": "TransUnion security freeze",
+      "domain": "transunion.com",
+      "legalBasis": "FCRA §1681c-1",
+      "removes": "Blocks new creditors from pulling your TransUnion file.",
+      "optOutUrl": "https://www.transunion.com/credit-freeze",
+      "automation": "none-interactive",
+      "revocable": true,
+      "cost": "free",
+      "steps": ["Freeze online", "Record the PIN in the device vault"]
+    },
+    {
+      "id": "freeze-innovis",
+      "name": "Innovis security freeze",
+      "domain": "innovis.com",
+      "legalBasis": "FCRA §1681c-1",
+      "removes": "The fourth nationwide consumer reporting agency — most people forget it, which is exactly why freezes there are worth doing.",
+      "optOutUrl": "https://www.innovis.com/personal/securityFreeze",
+      "automation": "none-interactive",
+      "revocable": true,
+      "cost": "free",
+      "steps": ["Freeze online or by mail", "Record the PIN"]
+    },
+    {
+      "id": "freeze-chexsystems",
+      "name": "ChexSystems security freeze",
+      "domain": "chexsystems.com",
+      "legalBasis": "FCRA §1681c-1 (deposit-account reporting)",
+      "removes": "Blocks fraudulent bank-account opening in your name — the gap left by the three big bureaus.",
+      "optOutUrl": "https://www.chexsystems.com/security-freeze",
+      "automation": "none-interactive",
+      "revocable": true,
+      "cost": "free",
+      "steps": ["Freeze online", "Record the PIN"]
+    },
+    {
+      "id": "freeze-nctue",
+      "name": "NCTUE security freeze",
+      "domain": "nctue.com",
+      "legalBasis": "FCRA §1681c-1 (telecom/utility reporting)",
+      "removes": "Blocks fraudulent phone/utility account opening. Obscure, cheap to do, rarely done.",
+      "optOutUrl": "https://www.nctue.com/Consumers",
+      "automation": "none-interactive",
+      "revocable": true,
+      "cost": "free",
+      "steps": ["Freeze online", "Record the PIN"]
+    },
+    {
+      "id": "prescreened-offers",
+      "name": "Prescreened credit & insurance offers",
+      "domain": "optoutprescreen.com",
+      "legalBasis": "FCRA §1681b(e)",
+      "removes": "Stops the pre-approved credit-card and insurance offer flow at the source — this is the highest-volume removal available to you and it is a statutory right.",
+      "optOutUrl": "https://www.optoutprescreen.com/",
+      "automation": "partial",
+      "revocable": true,
+      "cost": "free",
+      "steps": [
+        "Choose the 5-year electronic opt-out, or",
+        "For permanent removal, print the form, sign it, and mail it — the mail-back is the only permanent path",
+        "Note: it must be redone if you ever opt back in"
+      ]
+    },
+    {
+      "id": "dma-choice",
+      "name": "DMAchoice (direct-mail marketing)",
+      "domain": "dmachoice.org",
+      "legalBasis": "industry self-regulation — no statutory backing",
+      "removes": "Cuts addressed junk mail. Weak and slow; included only because it is cheap.",
+      "optOutUrl": "https://www.dmachoice.org/",
+      "automation": "none-interactive",
+      "revocable": true,
+      "cost": "verify",
+      "steps": [
+        "Register each mailing name/address",
+        "Check the current fee at the site before paying anything — this has changed before"
+      ]
+    },
+    {
+      "id": "daa-optout",
+      "name": "Digital Advertising Alliance opt-out",
+      "domain": "optout.aboutads.info",
+      "legalBasis": "industry self-regulation",
+      "removes": "Sets opt-out cookies for participating ad networks — per-browser only, wiped by clearing cookies. Low durability, low effort.",
+      "optOutUrl": "https://optout.aboutads.info/",
+      "automation": "none-interactive",
+      "revocable": true,
+      "cost": "free",
+      "steps": ["Opt out in each browser you actually use", "Re-do after clearing cookies"]
+    },
+    {
+      "id": "nai-optout",
+      "name": "NAI network advertising opt-out",
+      "domain": "optout.networkadvertising.org",
+      "legalBasis": "industry self-regulation",
+      "removes": "Same idea as DAA, different membership list.",
+      "optOutUrl": "https://optout.networkadvertising.org/",
+      "automation": "none-interactive",
+      "revocable": true,
+      "cost": "free",
+      "steps": ["Opt out per browser"]
+    },
+    {
+      "id": "hibp-notify",
+      "name": "Have I Been Pwned notifications",
+      "domain": "haveibeenpwned.com",
+      "legalBasis": "n/a — notification only",
+      "removes": "Nothing. Tells you when an address appears in a new breach. Included so the ledger can distinguish 'removed' from 'leaked again', which are different problems.",
+      "optOutUrl": "https://haveibeenpwned.com/NotifyMe",
+      "automation": "manual",
+      "revocable": true,
+      "cost": "free",
+      "steps": [
+        "Subscribe both addresses",
+        "Treat a notification as a credential-rotation task, not a removal task"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,1209 @@
+{
+  "source": {
+    "name": "Big Ass Data Broker Opt-Out List (BADBOOL)",
+    "repo": "https://github.com/yaelwrites/Big-Ass-Data-Broker-Opt-Out-List",
+    "commit": "79f63fdc8a9791246af5e10865865aff584d809b",
+    "fileSha256": "7d1095eaa3607d4423472bc111809ec8980f9564a456681448bf99d647db85ee",
+    "license": "CC BY-NC-SA 4.0",
+    "licenseFile": "packages/registry/vendor/badbool/LICENSE-BADBOOL.md",
+    "author": "Yael Grauer",
+    "generatedBy": "scripts/import-badbool.mjs",
+    "warning": "Derived work. CC BY-NC-SA 4.0 — attribution required, non-commercial only, share-alike."
+  },
+  "tally": {
+    "total": 51,
+    "crucial": 11,
+    "high": 5,
+    "normal": 35,
+    "byAuthTier": {
+      "email": 9,
+      "form": 37,
+      "captcha": 4,
+      "id-required": 1
+    },
+    "bySection": {
+      "People Search Sites": 45,
+      "Preventing Identity Theft & Opting Out of Marketing Sites": 6
+    }
+  },
+  "entries": [
+    {
+      "id": "beenverified",
+      "name": "BeenVerified",
+      "section": "People Search Sites",
+      "domain": "beenverified.com",
+      "optOutUrl": "https://www.beenverified.com/app/optout/search",
+      "leverage": "crucial",
+      "authTier": "email",
+      "flags": {
+        "crucial": true,
+        "highPriority": false,
+        "requiresId": false,
+        "requiresPhone": false,
+        "costsMoney": false
+      },
+      "notes": "Find your information and opt out of people search and property search. BeenVerified also owns PeopleLooker and PeopleSmart.",
+      "additionalLinks": [
+        {
+          "text": "property search",
+          "url": "https://www.beenverified.com/app/optout/address-search"
+        }
+      ]
+    },
+    {
+      "id": "checkpeople",
+      "name": "CheckPeople",
+      "section": "People Search Sites",
+      "domain": "checkpeople.com",
+      "optOutUrl": "https://checkpeople.com/privacy-rights",
+      "leverage": "crucial",
+      "authTier": "form",
+      "flags": {
+        "crucial": true,
+        "highPriority": false,
+        "requiresId": false,
+        "requiresPhone": false,
+        "costsMoney": false
+      },
+      "notes": "First, request a copy of your data by filling out your name and email address under “Right to Know” at CheckPeople's privacy rights page. If CheckPeople has your information, opt out.",
+      "additionalLinks": [
+        {
+          "text": "opt out",
+          "url": "https://checkpeople.com/opt-out"
+        }
+      ]
+    },
+    {
+      "id": "clustal",
+      "name": "Clustal",
+      "section": "People Search Sites",
+      "domain": "clustal.org",
+      "optOutUrl": "https://www.clustal.org/privacy-control",
+      "leverage": "crucial",
+      "authTier": "email",
+      "flags": {
+        "crucial": true,
+        "highPriority": false,
+        "requiresId": false,
+        "requiresPhone": false,
+        "costsMoney": false
+      },
+      "notes": "Go to Clustal.org and look for your information in the top search bar. Click on “view full record” to grab the URL.",
+      "additionalLinks": [
+        {
+          "text": "Clustal.org",
+          "url": "http://Clustal.org"
+        }
+      ]
+    },
+    {
+      "id": "intelius",
+      "name": "Intelius",
+      "section": "People Search Sites",
+      "domain": "suppression.peopleconnect.us",
+      "optOutUrl": "https://suppression.peopleconnect.us/login",
+      "leverage": "crucial",
+      "authTier": "form",
+      "flags": {
+        "crucial": true,
+        "highPriority": false,
+        "requiresId": false,
+        "requiresPhone": false,
+        "costsMoney": false
+      },
+      "notes": "Find your information. Opt out by emailing <support@mailer.intelius.com>, calling 1-888-245-1655, or filling out a form.",
+      "additionalLinks": [
+        {
+          "text": "Find your information",
+          "url": "https://www.intelius.com/"
+        }
+      ]
+    },
+    {
+      "id": "men-stopping-violence",
+      "name": "Men Stopping Violence",
+      "section": "People Search Sites",
+      "domain": "menstoppingviolence.org",
+      "optOutUrl": "https://www.menstoppingviolence.org/opt-out/",
+      "leverage": "crucial",
+      "authTier": "email",
+      "flags": {
+        "crucial": true,
+        "highPriority": false,
+        "requiresId": false,
+        "requiresPhone": false,
+        "costsMoney": false
+      },
+      "notes": "First, search for your name. Then enter the URL in the opt-out page.",
+      "additionalLinks": [
+        {
+          "text": "search for your name",
+          "url": "https://www.menstoppingviolence.org/people/"
+        }
+      ]
+    },
+    {
+      "id": "mylife",
+      "name": "MyLife",
+      "section": "People Search Sites",
+      "domain": "mylife.com",
+      "optOutUrl": "https://www.mylife.com/privacyrequest",
+      "leverage": "crucial",
+      "authTier": "form",
+      "flags": {
+        "crucial": true,
+        "highPriority": false,
+        "requiresId": false,
+        "requiresPhone": true,
+        "costsMoney": false
+      },
+      "notes": "Find your information, and then opt out. Another option is to email your removal request to <privacy@mylife.com> with your name and a link to your profile.",
+      "additionalLinks": [
+        {
+          "text": "Find your information",
+          "url": "https://www.mylife.com"
+        }
+      ]
+    },
+    {
+      "id": "nuwber",
+      "name": "Nuwber",
+      "section": "People Search Sites",
+      "domain": "nuwber.com",
+      "optOutUrl": "https://nuwber.com/",
+      "leverage": "crucial",
+      "authTier": "form",
+      "flags": {
+        "crucial": true,
+        "highPriority": false,
+        "requiresId": false,
+        "requiresPhone": false,
+        "costsMoney": false
+      },
+      "notes": "Find your information. Try to opt out on the removal form.",
+      "additionalLinks": [
+        {
+          "text": "removal form",
+          "url": "https://nuwber.com/removal/link"
+        }
+      ]
+    },
+    {
+      "id": "smartbackgroundchecks",
+      "name": "SmartBackgroundChecks",
+      "section": "People Search Sites",
+      "domain": "smartbackgroundchecks.com",
+      "optOutUrl": "https://www.smartbackgroundchecks.com/optout",
+      "leverage": "crucial",
+      "authTier": "form",
+      "flags": {
+        "crucial": true,
+        "highPriority": false,
+        "requiresId": false,
+        "requiresPhone": false,
+        "costsMoney": false
+      },
+      "notes": "Find your information. Then, opt out.",
+      "additionalLinks": [
+        {
+          "text": "your information",
+          "url": "https://www.smartbackgroundchecks.com/"
+        }
+      ]
+    },
+    {
+      "id": "spokeo",
+      "name": "Spokeo",
+      "section": "People Search Sites",
+      "domain": "spokeo.com",
+      "optOutUrl": "https://www.spokeo.com/optout",
+      "leverage": "crucial",
+      "authTier": "email",
+      "flags": {
+        "crucial": true,
+        "highPriority": false,
+        "requiresId": false,
+        "requiresPhone": false,
+        "costsMoney": true
+      },
+      "notes": "Find your information and remove your information by entering the URL of the profile you want removed and your email address on the opt-out page. Make sure to scroll down to the grammatically incorrect “opt out your information” section.",
+      "additionalLinks": [
+        {
+          "text": "your information",
+          "url": "https://www.spokeo.com/search"
+        }
+      ]
+    },
+    {
+      "id": "thats-them",
+      "name": "That’s Them",
+      "section": "People Search Sites",
+      "domain": "thatsthem.com",
+      "optOutUrl": "https://thatsthem.com/optout",
+      "leverage": "crucial",
+      "authTier": "form",
+      "flags": {
+        "crucial": true,
+        "highPriority": false,
+        "requiresId": false,
+        "requiresPhone": false,
+        "costsMoney": false
+      },
+      "notes": "Find your information. If it shows up, try to opt out.",
+      "additionalLinks": [
+        {
+          "text": "your information",
+          "url": "https://thatsthem.com/"
+        }
+      ]
+    },
+    {
+      "id": "white-pages",
+      "name": "White Pages",
+      "section": "People Search Sites",
+      "domain": "whitepages.com",
+      "optOutUrl": "https://www.whitepages.com/suppression_requests",
+      "leverage": "crucial",
+      "authTier": "form",
+      "flags": {
+        "crucial": true,
+        "highPriority": false,
+        "requiresId": false,
+        "requiresPhone": true,
+        "costsMoney": true
+      },
+      "notes": "Find your information, and then opt out. You will need to provide a phone number and enter an opt-out code when you receive the phone call.",
+      "additionalLinks": [
+        {
+          "text": "your information",
+          "url": "https://www.whitepages.com/"
+        },
+        {
+          "text": "is available",
+          "url": "https://support.whitepages.com/hc/en-us/articles/115010106908-How-do-I-edit-or-remove-a-personal-listing"
+        },
+        {
+          "text": "send a request form",
+          "url": "https://support.whitepages.com/hc/en-us/requests/new"
+        },
+        {
+          "text": "411.com",
+          "url": "https://www.411.com/"
+        }
+      ]
+    },
+    {
+      "id": "acxiom",
+      "name": "Acxiom",
+      "section": "People Search Sites",
+      "domain": "acxiom.com",
+      "optOutUrl": "https://www.acxiom.com/privacy/fr/",
+      "leverage": "high",
+      "authTier": "form",
+      "flags": {
+        "crucial": false,
+        "highPriority": true,
+        "requiresId": false,
+        "requiresPhone": false,
+        "costsMoney": false
+      },
+      "notes": "It is hard to find your own info for free, but people in some countries can opt out using the following links: Portail des droits des consommateurs | Acxiom (France) Portale delle preferenze dei consumatori | Acxiom (Italy) Portal de preferencia del consumidor | Acxiom (Spain) US Consumer Opt Out | Acxiom (U.S.) Use…",
+      "additionalLinks": [
+        {
+          "text": "Portale delle preferenze dei consumatori | Acxiom",
+          "url": "https://www.acxiom.com/privacy/it/"
+        },
+        {
+          "text": "Portal de preferencia del consumidor | Acxiom",
+          "url": "https://www.acxiom.com/privacy/es/"
+        },
+        {
+          "text": "US Consumer Opt Out | Acxiom",
+          "url": "https://www.acxiom.com/optout/"
+        },
+        {
+          "text": "Acxiom Consumer International Rights Portal",
+          "url": "https://privacyportal.onetrust.com/webform/342ca6ac-4177-4827-b61e-19070296cbd3/6896cf25-6953-4500-9c69-5a8fb6f6f932"
+        }
+      ]
+    },
+    {
+      "id": "ancestry-com",
+      "name": "Ancestry.com",
+      "section": "People Search Sites",
+      "domain": "ancestry.com",
+      "optOutUrl": "https://www.ancestry.com/account/",
+      "leverage": "high",
+      "authTier": "form",
+      "flags": {
+        "crucial": false,
+        "highPriority": true,
+        "requiresId": false,
+        "requiresPhone": false,
+        "costsMoney": false
+      },
+      "notes": "While you can’t see all of your data without a paid account, Ancestry will delete information if you email links that would redirect you to the proper site if you had an account. Sign up for a free account (not a free trial!), and then search for your information on the sidebar.",
+      "additionalLinks": [
+        {
+          "text": "this content removal form",
+          "url": "https://support.ancestry.com/s/reportissue?language=en_US"
+        }
+      ]
+    },
+    {
+      "id": "familytreenow",
+      "name": "FamilyTreeNow",
+      "section": "People Search Sites",
+      "domain": "familytreenow.com",
+      "optOutUrl": "https://www.familytreenow.com/optout",
+      "leverage": "high",
+      "authTier": "form",
+      "flags": {
+        "crucial": false,
+        "highPriority": true,
+        "requiresId": false,
+        "requiresPhone": false,
+        "costsMoney": false
+      },
+      "notes": "Search for yourself and remove your information.",
+      "additionalLinks": []
+    },
+    {
+      "id": "fastpeoplesearch-com",
+      "name": "FastPeopleSearch.com",
+      "section": "People Search Sites",
+      "domain": "fastpeoplesearch.com",
+      "optOutUrl": "https://www.fastpeoplesearch.com/optout",
+      "leverage": "high",
+      "authTier": "captcha",
+      "flags": {
+        "crucial": false,
+        "highPriority": true,
+        "requiresId": false,
+        "requiresPhone": false,
+        "costsMoney": false
+      },
+      "notes": "Look for and remove your information. You may need to solve a captcha.",
+      "additionalLinks": [
+        {
+          "text": "Look for",
+          "url": "https://www.fastpeoplesearch.com/"
+        }
+      ]
+    },
+    {
+      "id": "usphonebook",
+      "name": "USPhoneBook",
+      "section": "People Search Sites",
+      "domain": "usphonebook.com",
+      "optOutUrl": "https://www.usphonebook.com/opt-out/",
+      "leverage": "high",
+      "authTier": "form",
+      "flags": {
+        "crucial": false,
+        "highPriority": true,
+        "requiresId": false,
+        "requiresPhone": false,
+        "costsMoney": false
+      },
+      "notes": "Look for your number and opt out. If the opt-out link just hangs, email support+optout@usphonebook.com for help.",
+      "additionalLinks": []
+    },
+    {
+      "id": "archives",
+      "name": "Archives",
+      "section": "People Search Sites",
+      "domain": "archives.com",
+      "optOutUrl": "https://www.archives.com/Optout",
+      "leverage": "normal",
+      "authTier": "form",
+      "flags": {
+        "crucial": false,
+        "highPriority": false,
+        "requiresId": false,
+        "requiresPhone": false,
+        "costsMoney": false
+      },
+      "notes": "To find your information, you must sign up for a free trial (and then cancel). Then, opt out if you found your data.",
+      "additionalLinks": [
+        {
+          "text": "sign up for a free trial",
+          "url": "https://www.archives.com/search/ancestor/checkout"
+        }
+      ]
+    },
+    {
+      "id": "classmates-com",
+      "name": "Classmates.com",
+      "section": "People Search Sites",
+      "domain": "help.classmates.com",
+      "optOutUrl": "https://help.classmates.com/hc/en-us/articles/115002224171-How-can-I-cancel-my-membership-",
+      "leverage": "normal",
+      "authTier": "form",
+      "flags": {
+        "crucial": false,
+        "highPriority": false,
+        "requiresId": false,
+        "requiresPhone": false,
+        "costsMoney": false
+      },
+      "notes": "Cancel your free or paid membership following these instructions.",
+      "additionalLinks": []
+    },
+    {
+      "id": "cyber-background-checks",
+      "name": "Cyber Background Checks",
+      "section": "People Search Sites",
+      "domain": "cyberbackgroundchecks.com",
+      "optOutUrl": "https://www.cyberbackgroundchecks.com/",
+      "leverage": "normal",
+      "authTier": "form",
+      "flags": {
+        "crucial": false,
+        "highPriority": false,
+        "requiresId": false,
+        "requiresPhone": false,
+        "costsMoney": false
+      },
+      "notes": "Look for your information and opt out.",
+      "additionalLinks": [
+        {
+          "text": "opt out",
+          "url": "https://www.cyberbackgroundchecks.com/removal"
+        }
+      ]
+    },
+    {
+      "id": "everyjoe",
+      "name": "EveryJoe",
+      "section": "People Search Sites",
+      "domain": "everyjoe.com",
+      "optOutUrl": "https://www.everyjoe.com/",
+      "leverage": "normal",
+      "authTier": "form",
+      "flags": {
+        "crucial": false,
+        "highPriority": false,
+        "requiresId": false,
+        "requiresPhone": false,
+        "costsMoney": false
+      },
+      "notes": "Look for your information and insert the copied link into the opt-out page.",
+      "additionalLinks": [
+        {
+          "text": "opt-out page",
+          "url": "https://www.everyjoe.com/do-not-sell/"
+        }
+      ]
+    },
+    {
+      "id": "facecheck",
+      "name": "Facecheck",
+      "section": "People Search Sites",
+      "domain": "facecheck.id",
+      "optOutUrl": "https://facecheck.id/Face-Search/RemoveMyPhotos",
+      "leverage": "normal",
+      "authTier": "form",
+      "flags": {
+        "crucial": false,
+        "highPriority": false,
+        "requiresId": false,
+        "requiresPhone": false,
+        "costsMoney": false
+      },
+      "notes": "Facecheck.id is reverse image search software that uses an uploaded image to locate your face across in photos and videos on major social media platforms. If this type of search is something you are concerned about, you can remove your face from its search engine by searching for your image, uploading a driver’s lic…",
+      "additionalLinks": [
+        {
+          "text": "Facecheck.id",
+          "url": "https://Facecheck.id"
+        }
+      ]
+    },
+    {
+      "id": "familysearch",
+      "name": "FamilySearch",
+      "section": "People Search Sites",
+      "domain": "familysearch.org",
+      "optOutUrl": "https://www.familysearch.org/",
+      "leverage": "normal",
+      "authTier": "email",
+      "flags": {
+        "crucial": false,
+        "highPriority": false,
+        "requiresId": false,
+        "requiresPhone": false,
+        "costsMoney": false
+      },
+      "notes": "Sign up for a free account and search historical records. Copy the URLs for the records with your information, and submit this opt-out form.",
+      "additionalLinks": [
+        {
+          "text": "search historical records",
+          "url": "https://www.familysearch.org/search/"
+        },
+        {
+          "text": "submit this opt-out form",
+          "url": "https://submit-irm.trustarc.com/services/validation/b8d6e704-e5b1-42a0-9f86-bbdec35939a1"
+        }
+      ]
+    },
+    {
+      "id": "freepeopledirectory",
+      "name": "FreePeopleDirectory",
+      "section": "People Search Sites",
+      "domain": "spokeo.com",
+      "optOutUrl": "https://www.spokeo.com/optout",
+      "leverage": "normal",
+      "authTier": "form",
+      "flags": {
+        "crucial": false,
+        "highPriority": false,
+        "requiresId": false,
+        "requiresPhone": false,
+        "costsMoney": false
+      },
+      "notes": "Search for your information. If you find it, you can opt out on Spokeo’s opt-out page.",
+      "additionalLinks": [
+        {
+          "text": "Search for your information",
+          "url": "https://www.freepeopledirectory.com"
+        }
+      ]
+    },
+    {
+      "id": "infotracer",
+      "name": "InfoTracer",
+      "section": "People Search Sites",
+      "domain": "infotracer.com",
+      "optOutUrl": "https://infotracer.com/optout/",
+      "leverage": "normal",
+      "authTier": "form",
+      "flags": {
+        "crucial": false,
+        "highPriority": false,
+        "requiresId": false,
+        "requiresPhone": false,
+        "costsMoney": false
+      },
+      "notes": "Find your information and opt out by filling out the form. You can also mail in a different form or fax it to 1-617-933-9946.",
+      "additionalLinks": [
+        {
+          "text": "Find your information",
+          "url": "https://www.infotracer.com"
+        },
+        {
+          "text": "a different form",
+          "url": "https://members.infotracer.com/tspec/shared/assets/data_opt_out_form.pdf"
+        }
+      ]
+    },
+    {
+      "id": "national-public-data",
+      "name": "National Public Data",
+      "section": "People Search Sites",
+      "domain": "nationalpublicdata.com",
+      "optOutUrl": "https://nationalpublicdata.com/optout.html",
+      "leverage": "normal",
+      "authTier": "form",
+      "flags": {
+        "crucial": false,
+        "highPriority": false,
+        "requiresId": false,
+        "requiresPhone": false,
+        "costsMoney": false
+      },
+      "notes": "Search for your data, copy the unique URL, and paste it in the opt-out form. You’ll then need to share your email address and verify the opt-out request via email.",
+      "additionalLinks": [
+        {
+          "text": "Search for your data",
+          "url": "https://nationalpublicdata.com/search"
+        }
+      ]
+    },
+    {
+      "id": "peoplebyname",
+      "name": "PeopleByName",
+      "section": "People Search Sites",
+      "domain": "peoplebyname.com",
+      "optOutUrl": "https://www.peoplebyname.com/remove.php",
+      "leverage": "normal",
+      "authTier": "form",
+      "flags": {
+        "crucial": false,
+        "highPriority": false,
+        "requiresId": false,
+        "requiresPhone": false,
+        "costsMoney": false
+      },
+      "notes": "Look up your name. Or, you can fill in your name in the URL like this: https://www.peoplebyname.com/people/[Last_Name]/[First_Name].",
+      "additionalLinks": [
+        {
+          "text": "Look up your name",
+          "url": "https://www.peoplebyname.com/people"
+        }
+      ]
+    },
+    {
+      "id": "peoplesearchnow",
+      "name": "PeopleSearchNow",
+      "section": "People Search Sites",
+      "domain": "peoplesearchnow.com",
+      "optOutUrl": "https://www.peoplesearchnow.com/opt-out",
+      "leverage": "normal",
+      "authTier": "form",
+      "flags": {
+        "crucial": false,
+        "highPriority": false,
+        "requiresId": false,
+        "requiresPhone": false,
+        "costsMoney": false
+      },
+      "notes": "Find your information and opt out.",
+      "additionalLinks": []
+    },
+    {
+      "id": "pimeyes",
+      "name": "PimEyes",
+      "section": "People Search Sites",
+      "domain": "pimeyes.com",
+      "optOutUrl": "https://pimeyes.com/en/opt-out-request-form",
+      "leverage": "normal",
+      "authTier": "id-required",
+      "flags": {
+        "crucial": false,
+        "highPriority": false,
+        "requiresId": true,
+        "requiresPhone": false,
+        "costsMoney": false
+      },
+      "notes": "PimEyes is an online face search engine that uses face recognition to perform a reverse image search, finding pictures of your face (or others like it) throughout the Internet. If you want to see if your photographs are in PimEyes’ database, consider uploading a photo.",
+      "additionalLinks": [
+        {
+          "text": "uploading a photo",
+          "url": "https://pimeyes.com/"
+        },
+        {
+          "text": "in its blog",
+          "url": "https://signal.org/blog/blur-tools/"
+        }
+      ]
+    },
+    {
+      "id": "privateeye",
+      "name": "PrivateEye",
+      "section": "People Search Sites",
+      "domain": "privateeye.com",
+      "optOutUrl": "https://www.privateeye.com/",
+      "leverage": "normal",
+      "authTier": "form",
+      "flags": {
+        "crucial": false,
+        "highPriority": false,
+        "requiresId": false,
+        "requiresPhone": false,
+        "costsMoney": false
+      },
+      "notes": "Look for your information and initiate the opt-out, if needed. You will receive a link for a record removal form that you’ll have to fill out.",
+      "additionalLinks": [
+        {
+          "text": "initiate the opt-out",
+          "url": "https://www.privateeye.com/removal"
+        }
+      ]
+    },
+    {
+      "id": "privaterecords",
+      "name": "PrivateRecords",
+      "section": "People Search Sites",
+      "domain": "privaterecords.net",
+      "optOutUrl": "https://www.privaterecords.net/api/helper/optOutLight/search",
+      "leverage": "normal",
+      "authTier": "form",
+      "flags": {
+        "crucial": false,
+        "highPriority": false,
+        "requiresId": false,
+        "requiresPhone": false,
+        "costsMoney": false
+      },
+      "notes": "Search for your name and state and opt out.",
+      "additionalLinks": [
+        {
+          "text": "Search for your name and state",
+          "url": "https://www.privaterecords.net/name/landing"
+        }
+      ]
+    },
+    {
+      "id": "propertyrecs",
+      "name": "PropertyRecs",
+      "section": "People Search Sites",
+      "domain": "dashboard.propertyrecs.com",
+      "optOutUrl": "https://dashboard.propertyrecs.com/opt-out",
+      "leverage": "normal",
+      "authTier": "form",
+      "flags": {
+        "crucial": false,
+        "highPriority": false,
+        "requiresId": false,
+        "requiresPhone": false,
+        "costsMoney": false
+      },
+      "notes": "Search for your name and state in the opt-out page, then opt out if needed.",
+      "additionalLinks": []
+    },
+    {
+      "id": "searchbug",
+      "name": "Searchbug",
+      "section": "People Search Sites",
+      "domain": "searchbug.com",
+      "optOutUrl": "https://www.searchbug.com/",
+      "leverage": "normal",
+      "authTier": "form",
+      "flags": {
+        "crucial": false,
+        "highPriority": false,
+        "requiresId": false,
+        "requiresPhone": false,
+        "costsMoney": true
+      },
+      "notes": "Unfortunately, you have to sign up with a credit card to search for your information, though your first search is free. You can contact Searchbug using the contact form or chat link or via phone or text at (760) 454-7301 or via fax at (760) 454-7341 to ask them to block the display of your personal information.",
+      "additionalLinks": [
+        {
+          "text": "contact form or chat link",
+          "url": "https://www.searchbug.com/contact-us.aspx"
+        }
+      ]
+    },
+    {
+      "id": "searchpeoplefree",
+      "name": "SearchPeopleFree",
+      "section": "People Search Sites",
+      "domain": "searchpeoplefree.com",
+      "optOutUrl": "https://www.searchpeoplefree.com/opt-out",
+      "leverage": "normal",
+      "authTier": "form",
+      "flags": {
+        "crucial": false,
+        "highPriority": false,
+        "requiresId": false,
+        "requiresPhone": false,
+        "costsMoney": false
+      },
+      "notes": "Find your information, making sure to search by name, phone number, address and email address: Opt out.",
+      "additionalLinks": [
+        {
+          "text": "your information",
+          "url": "https://www.searchpeoplefree.com/"
+        }
+      ]
+    },
+    {
+      "id": "searchquarry",
+      "name": "SearchQuarry",
+      "section": "People Search Sites",
+      "domain": "members.searchquarry.com",
+      "optOutUrl": "https://members.searchquarry.com/removeMyData/",
+      "leverage": "normal",
+      "authTier": "email",
+      "flags": {
+        "crucial": false,
+        "highPriority": false,
+        "requiresId": false,
+        "requiresPhone": false,
+        "costsMoney": false
+      },
+      "notes": "Find your information. If it’s listed, opt out You will need to click the verification link in your inbox to finalize the opt out.",
+      "additionalLinks": [
+        {
+          "text": "your information",
+          "url": "https://www.searchquarry.com/"
+        }
+      ]
+    },
+    {
+      "id": "social-catfish",
+      "name": "Social Catfish",
+      "section": "People Search Sites",
+      "domain": "socialcatfish.com",
+      "optOutUrl": "https://socialcatfish.com/opt-out/",
+      "leverage": "normal",
+      "authTier": "email",
+      "flags": {
+        "crucial": false,
+        "highPriority": false,
+        "requiresId": false,
+        "requiresPhone": false,
+        "costsMoney": false
+      },
+      "notes": "Find your information. Record the URL of each page that has your information.",
+      "additionalLinks": [
+        {
+          "text": "your information",
+          "url": "https://socialcatfish.com"
+        }
+      ]
+    },
+    {
+      "id": "spyfly",
+      "name": "SpyFly",
+      "section": "People Search Sites",
+      "domain": "spyfly.com",
+      "optOutUrl": "https://www.spyfly.com/help-center/privacy-requests",
+      "leverage": "normal",
+      "authTier": "form",
+      "flags": {
+        "crucial": false,
+        "highPriority": false,
+        "requiresId": false,
+        "requiresPhone": false,
+        "costsMoney": true
+      },
+      "notes": "Look for your data. Then, opt out.",
+      "additionalLinks": [
+        {
+          "text": "your data",
+          "url": "https://www.spyfly.com"
+        }
+      ]
+    },
+    {
+      "id": "truepeoplesearch-com",
+      "name": "TruePeopleSearch.com",
+      "section": "People Search Sites",
+      "domain": "truepeoplesearch.com",
+      "optOutUrl": "https://www.truepeoplesearch.com/removal",
+      "leverage": "normal",
+      "authTier": "captcha",
+      "flags": {
+        "crucial": false,
+        "highPriority": false,
+        "requiresId": false,
+        "requiresPhone": false,
+        "costsMoney": false
+      },
+      "notes": "Follow the removal instructions. You will need to enter your name, city and state, and email address, and then you’ll need to solve several captchas to see if you are listed, after which you can remove your information.",
+      "additionalLinks": []
+    },
+    {
+      "id": "truepeoplesearch-net",
+      "name": "TruePeopleSearch.net",
+      "section": "People Search Sites",
+      "domain": "truepeoplesearch.net",
+      "optOutUrl": "https://truepeoplesearch.net",
+      "leverage": "normal",
+      "authTier": "form",
+      "flags": {
+        "crucial": false,
+        "highPriority": false,
+        "requiresId": false,
+        "requiresPhone": false,
+        "costsMoney": false
+      },
+      "notes": "First, look for your information. Make sure to close any additional pages the site opens, and do not click on any of the “top rated background search services” links.",
+      "additionalLinks": [
+        {
+          "text": "into this form",
+          "url": "https://docs.google.com/forms/d/e/1FAIpQLSeCPggzv4iXE20iUjcr6vdVWxBOblCyGwDLcO-jZA5j2YF5fQ/viewform"
+        }
+      ]
+    },
+    {
+      "id": "united-nations-public-administration-network",
+      "name": "United Nations Public Administration Network",
+      "section": "People Search Sites",
+      "domain": "unpan.org",
+      "optOutUrl": "https://unpan.org/opt-out",
+      "leverage": "normal",
+      "authTier": "email",
+      "flags": {
+        "crucial": false,
+        "highPriority": false,
+        "requiresId": false,
+        "requiresPhone": false,
+        "costsMoney": false
+      },
+      "notes": "Search for your information by filling out your first and last name, leaving off the city and state. Paste the URL in the opt-out page, and click on “submit opt-out request.” Type in your email address.",
+      "additionalLinks": [
+        {
+          "text": "your information",
+          "url": "https://unpan.org/"
+        }
+      ]
+    },
+    {
+      "id": "united-states-phone-book",
+      "name": "United States Phone Book",
+      "section": "People Search Sites",
+      "domain": "unitedstatesphonebook.com",
+      "optOutUrl": "https://www.unitedstatesphonebook.com/search.php",
+      "leverage": "normal",
+      "authTier": "form",
+      "flags": {
+        "crucial": false,
+        "highPriority": false,
+        "requiresId": false,
+        "requiresPhone": false,
+        "costsMoney": false
+      },
+      "notes": "Search for your information. If your address is listed and you want it removed, enter the telephone number and zip code listed on the above site in this page.",
+      "additionalLinks": [
+        {
+          "text": "in this page",
+          "url": "https://www.unitedstatesphonebook.com/contact.php"
+        }
+      ]
+    },
+    {
+      "id": "unmask",
+      "name": "UnMask",
+      "section": "People Search Sites",
+      "domain": "unmask.com",
+      "optOutUrl": "https://unmask.com/opt-out/",
+      "leverage": "normal",
+      "authTier": "captcha",
+      "flags": {
+        "crucial": false,
+        "highPriority": false,
+        "requiresId": false,
+        "requiresPhone": false,
+        "costsMoney": false
+      },
+      "notes": "Search for your information. Once you find your entry, go to the opt out form where you'll enter your name, city, and state.",
+      "additionalLinks": [
+        {
+          "text": "your information",
+          "url": "https://unmask.com/"
+        }
+      ]
+    },
+    {
+      "id": "usa-people-search",
+      "name": "USA People Search",
+      "section": "People Search Sites",
+      "domain": "usa-people-search.com",
+      "optOutUrl": "https://www.usa-people-search.com/",
+      "leverage": "normal",
+      "authTier": "form",
+      "flags": {
+        "crucial": false,
+        "highPriority": false,
+        "requiresId": false,
+        "requiresPhone": false,
+        "costsMoney": false
+      },
+      "notes": "Find and remove your information.",
+      "additionalLinks": [
+        {
+          "text": "remove your information",
+          "url": "https://www.usa-people-search.com/removal"
+        }
+      ]
+    },
+    {
+      "id": "veripages",
+      "name": "Veripages",
+      "section": "People Search Sites",
+      "domain": "veripages.com",
+      "optOutUrl": "https://veripages.com/inner/control-privacy",
+      "leverage": "normal",
+      "authTier": "captcha",
+      "flags": {
+        "crucial": false,
+        "highPriority": false,
+        "requiresId": false,
+        "requiresPhone": false,
+        "costsMoney": false
+      },
+      "notes": "Find your information. To opt out, enter the profile URL, along with your name and email.",
+      "additionalLinks": [
+        {
+          "text": "your information",
+          "url": "https://veripages.com/"
+        }
+      ]
+    },
+    {
+      "id": "voterrecords",
+      "name": "VoterRecords",
+      "section": "People Search Sites",
+      "domain": "voterrecords.com",
+      "optOutUrl": "https://voterrecords.com/",
+      "leverage": "normal",
+      "authTier": "email",
+      "flags": {
+        "crucial": false,
+        "highPriority": false,
+        "requiresId": false,
+        "requiresPhone": false,
+        "costsMoney": false
+      },
+      "notes": "Go to VoterRecords.com, find your information, scroll to the bottom of the page and click on the\"record opt-out\" link. This will lead to an opt-out form, which you’ll need to submit.",
+      "additionalLinks": []
+    },
+    {
+      "id": "zoominfo",
+      "name": "ZoomInfo",
+      "section": "People Search Sites",
+      "domain": "privacyrequest.zoominfo.com",
+      "optOutUrl": "https://privacyrequest.zoominfo.com/remove/verify",
+      "leverage": "normal",
+      "authTier": "form",
+      "flags": {
+        "crucial": false,
+        "highPriority": false,
+        "requiresId": false,
+        "requiresPhone": false,
+        "costsMoney": false
+      },
+      "notes": "Check to see if your information is on ZoomInfo by filling out this form. Opt out if it has an email on record—they will email you a code.",
+      "additionalLinks": []
+    },
+    {
+      "id": "consider-freezing-your-credit-which-prevents-scammers-from-opening-credit-accounts-in-your-name-where-credit-reports-are-a-necessary-prerequisite-to-extending-credit",
+      "name": "Consider freezing your credit, which prevents scammers from opening credit accounts in your name where credit reports are a necessary prerequisite to extending credit.",
+      "section": "Preventing Identity Theft & Opting Out of Marketing Sites",
+      "domain": "files.consumerfinance.gov",
+      "optOutUrl": "https://files.consumerfinance.gov/f/documents/cfpb_consumer-reporting-companies_list_2025.pdf",
+      "leverage": "normal",
+      "authTier": "form",
+      "flags": {
+        "crucial": false,
+        "highPriority": false,
+        "requiresId": false,
+        "requiresPhone": true,
+        "costsMoney": false
+      },
+      "notes": "To freeze your credit, you will need to provide personal information such as your name, address, date of birth, and social security number. Contact: - Equifax: 1 (800) 349-9960, <https://www.equifax.com/personal/credit-report-services/credit-freeze/> - Experian: 1 (888) 397‑3742, <https://www.experian.com/freeze/cen…",
+      "additionalLinks": [
+        {
+          "text": "Elder Fraud Toolkit",
+          "url": "https://github.com/stepuplaw/elder-fraud-toolkit"
+        }
+      ]
+    },
+    {
+      "id": "consider-opting-out-of-direct-marketing-and-telemarketing",
+      "name": "Consider opting out of direct marketing and telemarketing.",
+      "section": "Preventing Identity Theft & Opting Out of Marketing Sites",
+      "domain": "github.com",
+      "optOutUrl": "https://github.com/glamrock/data-brokers/blob/master/data-brokers.md",
+      "leverage": "normal",
+      "authTier": "form",
+      "flags": {
+        "crucial": false,
+        "highPriority": false,
+        "requiresId": false,
+        "requiresPhone": false,
+        "costsMoney": false
+      },
+      "notes": "This list, compiled by Griffin Boyce, has a lot of information on doing so: https://github.com/glamrock/data-brokers/blob/master/data-brokers.md. It was last updated in 2019.",
+      "additionalLinks": []
+    },
+    {
+      "id": "opt-out-of-prescreened-credit-offers",
+      "name": "Opt out of prescreened credit offers",
+      "section": "Preventing Identity Theft & Opting Out of Marketing Sites",
+      "domain": "optoutprescreen.com",
+      "optOutUrl": "https://www.optoutprescreen.com/",
+      "leverage": "normal",
+      "authTier": "form",
+      "flags": {
+        "crucial": false,
+        "highPriority": false,
+        "requiresId": false,
+        "requiresPhone": false,
+        "costsMoney": false
+      },
+      "notes": "Follow the instructions at https://www.optoutprescreen.com/",
+      "additionalLinks": []
+    },
+    {
+      "id": "get-on-the-do-not-call-registry",
+      "name": "Get on the Do Not Call Registry",
+      "section": "Preventing Identity Theft & Opting Out of Marketing Sites",
+      "domain": "donotcall.gov",
+      "optOutUrl": "https://www.donotcall.gov/",
+      "leverage": "normal",
+      "authTier": "form",
+      "flags": {
+        "crucial": false,
+        "highPriority": false,
+        "requiresId": false,
+        "requiresPhone": false,
+        "costsMoney": false
+      },
+      "notes": "https://www.donotcall.gov",
+      "additionalLinks": []
+    },
+    {
+      "id": "additional-options-paid-and-free",
+      "name": "Additional Options (Paid and Free)",
+      "section": "Preventing Identity Theft & Opting Out of Marketing Sites",
+      "domain": "easyoptouts.com",
+      "optOutUrl": "https://easyoptouts.com/",
+      "leverage": "normal",
+      "authTier": "form",
+      "flags": {
+        "crucial": false,
+        "highPriority": false,
+        "requiresId": false,
+        "requiresPhone": false,
+        "costsMoney": false
+      },
+      "notes": "While there are over a dozen different data broker opt-out services, I personally use and recommend EasyOptOuts. In general, note that removal services are not comprehensive, as some data brokers do not allow third parties to remove listings, and removal services do not include every data broker on this list, let al…",
+      "additionalLinks": [
+        {
+          "text": "this handy chart",
+          "url": "https://docs.google.com/spreadsheets/d/115L6LpQg_UX638IyUfdwGhRS7dIU3lKwz6fjAcDtE-0/"
+        },
+        {
+          "text": "PaperKarma",
+          "url": "https://www.paperkarma.com/product/paperkarma-subscription/"
+        },
+        {
+          "text": "Valpak coupon packs",
+          "url": "https://www.valpak.com/remove-address"
+        },
+        {
+          "text": "https://www.catalogchoice.org/",
+          "url": "https://www.catalogchoice.org/"
+        },
+        {
+          "text": "DMAChoice",
+          "url": "https://dmachoice.org/static/consumer_choice_tools.php"
+        },
+        {
+          "text": "here",
+          "url": "https://www.ims-dm.com/cgi/ddnc.php"
+        }
+      ]
+    },
+    {
+      "id": "additional-resources",
+      "name": "Additional Resources",
+      "section": "Preventing Identity Theft & Opting Out of Marketing Sites",
+      "domain": "epic.org",
+      "optOutUrl": "https://epic.org/wp-content/uploads/2026/05/Good-Luck-Opting-Out-Manipulative-Design-Patterns-in-Opt-Out-Processes.pdf",
+      "leverage": "normal",
+      "authTier": "form",
+      "flags": {
+        "crucial": false,
+        "highPriority": false,
+        "requiresId": false,
+        "requiresPhone": false,
+        "costsMoney": false
+      },
+      "notes": "EPIC released a new report, _Good Luck Opting Out: Manipulative Design Patterns in Opt-Out Processes_ by Justin Sherman and Caroline Kraczon, about the manipulative design patterns in opt-out processes (which you are likely intimately familiar with). I wrote a blog post about what my privacy and security stack actua…",
+      "additionalLinks": [
+        {
+          "text": "what my privacy and security stack actually looks like",
+          "url": "https://blog.yaelwrites.com/what-my-privacy-and-security-stack-actually-looks-like/"
+        },
+        {
+          "text": "Have I Been Pwned",
+          "url": "https://haveibeenpwned.com/"
+        }
+      ]
+    }
+  ]
+}

@@ -147,6 +147,35 @@ detected on a schedule.
 No legal backing in Washington. Expect a meaningful share of targets to ignore requests
 lawfully. The ledger records that as a state (`ignored`) rather than hiding it.
 
+**Measured reality (2026-10-28).** The vendored snapshot yields **51 entries**, not the
+"hundreds" assumed when this design was drafted: 11 💐 crucial, 5 ☠ high-priority, 35 tail.
+Eleven enforceable rows are added on top, giving **60 targets** in total, of which **22 are
+priority 0**. Two headings in the list are advisory rather than sites (_"contact your DMV…"_,
+_"contact your phone companies…"_) and are correctly excluded — that is why 53 headings yield
+51 entries.
+
+Two consequences that change the plan:
+
+- The broker tier is far smaller than expected, so breadth is not the work — reliability is.
+- Probing every opt-out URL from a residential IP with a browser user-agent returned
+  **403 on 23 of 51 broker endpoints** and 200 on the rest. Six of the eleven 💐 crucial
+  targets are behind a bot wall today. This is the empirical case for DESIGN §2.4: the
+  build must be a real browser on a residential IP, and any target that stays blocked
+  degrades to assisted-manual.
+
+**Licensing constraint.** BADBOOL is **CC BY-NC-SA 4.0**. The vendored snapshot and the
+derived `badbool.json` are therefore non-commercial and share-alike, and are segregated in
+`packages/registry/vendor/badbool/` with its own provenance file. This project can never be
+productised while it vendors that list; the enforceable tier has no such restriction.
+
+**Deduplication.** Two collapses are deliberate and load-bearing:
+
+- `optoutprescreen.com` appears in both tiers — the enforceable row wins, because it carries
+  the statutory basis and one domain must not produce two jobs.
+- `FreePeopleDirectory` resolves to `spokeo.com` (Spokeo owns it) — merged into the Spokeo
+  target and surfaced in its name, rather than dropped. A unique index on `targets.domain`
+  enforces this at the schema level.
+
 ---
 
 ## 4. Architecture
