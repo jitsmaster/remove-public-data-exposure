@@ -30,6 +30,8 @@ artifacts/
 *.jpeg
 *.pdf
 !docs/**/*.png
+# Generated app icons are the only PNGs allowed in the repo.
+!apps/pwa/static/*.png
 
 # Local databases — job metadata should stay PII-free, but keep them out anyway
 *.db
@@ -45,3 +47,6 @@ artifacts/
 .idea/
 .vscode/
 *.swp
+
+# Local runtime data
+apps/server/data/

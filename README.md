@@ -5,10 +5,10 @@ exposure for one person's identity — name, addresses, phones, DOB, and two ema
 
 Two tiers, separated by **legal strength**, not difficulty:
 
-| Tier | What | Legal basis |
-|---|---|---|
-| **Enforceable** | Credit freezes ×6, prescreened-offer opt-out, DMA/ANA lists, breach notifications | US federal law (FCRA) |
-| **Voluntary** | ~hundreds of data-broker opt-outs, verified and re-checked | None in Washington — these are *requests* |
+| Tier            | What                                                                              | Legal basis                               |
+| --------------- | --------------------------------------------------------------------------------- | ----------------------------------------- |
+| **Enforceable** | Credit freezes ×6, prescreened-offer opt-out, DMA/ANA lists, breach notifications | US federal law (FCRA)                     |
+| **Voluntary**   | ~hundreds of data-broker opt-outs, verified and re-checked                        | None in Washington — these are _requests_ |
 
 The ledger covers both. Only one tier has teeth, and the app says so.
 

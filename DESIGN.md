@@ -40,10 +40,10 @@ way it does.
 
 The Washington AG's own privacy report states the state "has not enacted a comparable,
 generally applicable consumer privacy law." HB 1671 (Washington Privacy Act) has failed
-repeatedly and remains in committee; its proposed enforcement date is Aug 2026 *if* it
+repeatedly and remains in committee; its proposed enforcement date is Aug 2026 _if_ it
 ever passes. What does exist is `RCW 19.373`, the **My Health My Data Act** — strong
 (private right of action under the Consumer Protection Act, statutory right to delete)
-but scoped to *consumer health data*. An email address is not health data.
+but scoped to _consumer health data_. An email address is not health data.
 
 **Consequence:** no statutory deletion right, no response deadline, no regulator to
 escalate to. Every broker opt-out is a request a broker may ignore lawfully. This is why
@@ -125,13 +125,13 @@ one tier has teeth.
 
 ### Tier 1 — Enforceable (federal rights)
 
-| Action | Legal basis | Automatable |
-|---|---|---|
-| Credit freeze — Equifax, Experian, TransUnion | FCRA, 15 U.S.C. §1681c-1 | No — identity-verified by design |
-| Credit freeze — Innovis, ChexSystems, NCTUE | Same, plus deposit/telecom reporting | No |
-| Opt out of prescreened credit offers | FCRA §1681b(e), optoutprescreen.com | Partly (form + mail-back for permanent) |
-| DMA / ANA marketing-list opt-outs | Industry, not law | Yes |
-| Data-breach notification subscriptions (HIBP) | N/A | Yes |
+| Action                                        | Legal basis                          | Automatable                             |
+| --------------------------------------------- | ------------------------------------ | --------------------------------------- |
+| Credit freeze — Equifax, Experian, TransUnion | FCRA, 15 U.S.C. §1681c-1             | No — identity-verified by design        |
+| Credit freeze — Innovis, ChexSystems, NCTUE   | Same, plus deposit/telecom reporting | No                                      |
+| Opt out of prescreened credit offers          | FCRA §1681b(e), optoutprescreen.com  | Partly (form + mail-back for permanent) |
+| DMA / ANA marketing-list opt-outs             | Industry, not law                    | Yes                                     |
+| Data-breach notification subscriptions (HIBP) | N/A                                  | Yes                                     |
 
 This tier is a **guided wizard plus ledger**: deep links, pre-filled context, status
 tracking, and nagging until done. It is not a robot, and pretending otherwise would be
@@ -187,16 +187,16 @@ deploy, but push arrives and cannot reach the box when the tunnel is down); LAN-
 
 ### 4.2 Components
 
-| Component | Runs where | Responsibility | Holds PII |
-|---|---|---|---|
-| PWA shell | Cloudflare Pages | UI, service worker, push receiver | No |
-| Vault | Device (IndexedDB) | Identity tuple, encrypted, non-extractable key | Yes |
-| Handoff UI | Device | CAPTCHA challenge presentation, resume trigger | Transiently |
-| Orchestrator API | Home box | Job queue, state transitions, diffing | No (metadata only) |
-| Worker | Home box | Playwright automation, form submission | Transiently, RAM only |
-| Search adapter | Home box | Brave Search sweep | Query terms only |
-| Mailbox reader | Home box | Parses forwarded broker confirmations, extracts links | Links + broker domains |
-| Mail forwarder | Gmail (user-owned) | One-way filter: broker domains → dedicated address | n/a |
+| Component        | Runs where         | Responsibility                                        | Holds PII              |
+| ---------------- | ------------------ | ----------------------------------------------------- | ---------------------- |
+| PWA shell        | Cloudflare Pages   | UI, service worker, push receiver                     | No                     |
+| Vault            | Device (IndexedDB) | Identity tuple, encrypted, non-extractable key        | Yes                    |
+| Handoff UI       | Device             | CAPTCHA challenge presentation, resume trigger        | Transiently            |
+| Orchestrator API | Home box           | Job queue, state transitions, diffing                 | No (metadata only)     |
+| Worker           | Home box           | Playwright automation, form submission                | Transiently, RAM only  |
+| Search adapter   | Home box           | Brave Search sweep                                    | Query terms only       |
+| Mailbox reader   | Home box           | Parses forwarded broker confirmations, extracts links | Links + broker domains |
+| Mail forwarder   | Gmail (user-owned) | One-way filter: broker domains → dedicated address    | n/a                    |
 
 ### 4.3 Stack
 
@@ -245,14 +245,14 @@ sufficient, since the human only needs to solve one widget.
 
 **Rule:** PII is never persisted server-side.
 
-| Data | Location | Lifetime |
-|---|---|---|
-| Identity tuple (name, aliases, addresses, phones, DOB, emails) | Device vault, AES-GCM, non-extractable key in IndexedDB | Indefinite, user-controlled |
-| Batch packet (decrypted tuple) | Home box RAM, tmpfs, no swap | Duration of batch, then discarded |
-| Job metadata (broker id, status, timestamps, attempt counts) | Home box SQLite | Indefinite |
-| Subject key (salted hash of identity) | Home box SQLite | Indefinite — used to key jobs without identifying |
-| Confirmation artifacts (links, receipts) | Device vault | Indefinite |
-| Screenshots from handoff | Discarded after job closes | Minutes |
+| Data                                                           | Location                                                | Lifetime                                          |
+| -------------------------------------------------------------- | ------------------------------------------------------- | ------------------------------------------------- |
+| Identity tuple (name, aliases, addresses, phones, DOB, emails) | Device vault, AES-GCM, non-extractable key in IndexedDB | Indefinite, user-controlled                       |
+| Batch packet (decrypted tuple)                                 | Home box RAM, tmpfs, no swap                            | Duration of batch, then discarded                 |
+| Job metadata (broker id, status, timestamps, attempt counts)   | Home box SQLite                                         | Indefinite                                        |
+| Subject key (salted hash of identity)                          | Home box SQLite                                         | Indefinite — used to key jobs without identifying |
+| Confirmation artifacts (links, receipts)                       | Device vault                                            | Indefinite                                        |
+| Screenshots from handoff                                       | Discarded after job closes                              | Minutes                                           |
 
 **Operational requirements:**
 
@@ -332,7 +332,7 @@ pending → searching → found → queued → awaiting-challenge → submitting
 ## 7. The re-listing loop
 
 - **Broker search re-checks:** scheduled, frequent, cheap. Querying a broker's search
-  endpoint is unchallenged; it is the *opt-out* that is CAPTCHA'd.
+  endpoint is unchallenged; it is the _opt-out_ that is CAPTCHA'd.
 - **Search-engine sweep:** quarterly, or on demand. Brave Search API only. Google and
   Bing prohibit automated querying and will IP-ban the residential address — which would
   also poison the egress IP the removal pipeline depends on. This is a real coupling, not
@@ -347,18 +347,18 @@ pending → searching → found → queued → awaiting-challenge → submitting
 
 ## 8. Failure modes and degradations
 
-| Failure | Behaviour |
-|---|---|
-| Broker blocks the IP | Target marked unreachable; sweep and removals pause; surfaced to user |
-| Page markup changed | Adapter throws typed error; 3 strikes ⇒ assisted-manual; adapter flagged for repair |
-| Challenge times out | Job degrades to assisted-manual with a deep link |
-| Phone unreachable | Job holds; batch pauses; no stale retry |
-| Forwarder inbox down | Confirmations accumulate; jobs sit in `awaiting-confirm`, not failed |
-| Broker ignores request | `ignored` after a defined window; recorded honestly, not as success |
-| Broker demands ID | `id-required`; surfaced to user as a task with instructions |
+| Failure                      | Behaviour                                                                             |
+| ---------------------------- | ------------------------------------------------------------------------------------- |
+| Broker blocks the IP         | Target marked unreachable; sweep and removals pause; surfaced to user                 |
+| Page markup changed          | Adapter throws typed error; 3 strikes ⇒ assisted-manual; adapter flagged for repair   |
+| Challenge times out          | Job degrades to assisted-manual with a deep link                                      |
+| Phone unreachable            | Job holds; batch pauses; no stale retry                                               |
+| Forwarder inbox down         | Confirmations accumulate; jobs sit in `awaiting-confirm`, not failed                  |
+| Broker ignores request       | `ignored` after a defined window; recorded honestly, not as success                   |
+| Broker demands ID            | `id-required`; surfaced to user as a task with instructions                           |
 | Vault evicted from IndexedDB | Detect on unlock; require re-entry. `storage.persist()` should prevent, not guarantee |
-| Tailscale down on phone | Push arrives, cannot reach box; queued server-side until reconnect |
-| Brave quota exhausted | Sweep defers to next quarter; broker checks unaffected |
+| Tailscale down on phone      | Push arrives, cannot reach box; queued server-side until reconnect                    |
+| Brave quota exhausted        | Sweep defers to next quarter; broker checks unaffected                                |
 
 ---
 

@@ -2,7 +2,7 @@
 
 Companion to `DESIGN.md`. Read that first; this assumes its decisions.
 
-**Sequencing principle: risk-first tracer bullets.** Every milestone is a *vertical*
+**Sequencing principle: risk-first tracer bullets.** Every milestone is a _vertical_
 slice that produces something observable end-to-end, and the scariest unknown is
 attacked in milestone 3 — not month four. Nothing here is sequenced by layer.
 
@@ -113,6 +113,7 @@ it needs a CAPTCHA) because it exercises the hard path immediately.
 `awaiting-confirm` with a receipt attached.
 
 **Abort/pivot criteria — decide honestly at the end of this milestone:**
+
 - If the held-session handoff is unreliable after two honest attempts, pivot to
   **assisted-manual as the primary mechanism** (deep link + prefilled instructions + ledger)
   and keep automation only for brokers with no challenge. That is a smaller product but a
@@ -204,15 +205,15 @@ missed real ones.
 
 ## Testing strategy
 
-| Layer | Approach |
-|---|---|
-| Vault / crypto | Unit tests; property test encrypt→decrypt roundtrip; test that a non-extractable key cannot be exported |
-| PII boundary | **Assertion test over the whole SQLite file**: after a full batch, dump every table and byte-grep for name, addresses, phones, DOB, emails. Must be clean. This is the most important test in the repo |
-| BADBOOL parser | Fixture snapshot of the list; parse to targets; assert leverage and auth tiers survive |
-| Adapters | Recorded HTML fixtures per broker; adapter runs against fixtures in CI, against live sites only manually |
-| Handoff | Manual protocol with a checklist per release; no realistic automation available |
-| Re-list diffing | Pure-function tests over synthetic observation sequences |
-| End-to-end | One ☠️ broker, manual, per release |
+| Layer           | Approach                                                                                                                                                                                               |
+| --------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| Vault / crypto  | Unit tests; property test encrypt→decrypt roundtrip; test that a non-extractable key cannot be exported                                                                                                |
+| PII boundary    | **Assertion test over the whole SQLite file**: after a full batch, dump every table and byte-grep for name, addresses, phones, DOB, emails. Must be clean. This is the most important test in the repo |
+| BADBOOL parser  | Fixture snapshot of the list; parse to targets; assert leverage and auth tiers survive                                                                                                                 |
+| Adapters        | Recorded HTML fixtures per broker; adapter runs against fixtures in CI, against live sites only manually                                                                                               |
+| Handoff         | Manual protocol with a checklist per release; no realistic automation available                                                                                                                        |
+| Re-list diffing | Pure-function tests over synthetic observation sequences                                                                                                                                               |
+| End-to-end      | One ☠️ broker, manual, per release                                                                                                                                                                     |
 
 Adapters are tested against fixtures, not the live web — a CI job that hits brokers will get
 the runner IP banned and produces flaky failures that teach nothing.

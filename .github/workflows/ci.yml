@@ -1,0 +1,48 @@
+name: ci
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: pnpm/action-setup@v4
+        with:
+          version: 10
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 24
+          cache: pnpm
+
+      - run: pnpm install --frozen-lockfile
+
+      - name: Formatting
+        run: pnpm format:check
+
+      - name: Typecheck
+        run: pnpm typecheck
+
+      - name: Build
+        run: pnpm build
+
+  pii-guard:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Refuse PII-shaped artifacts
+        run: |
+          # A committed trace, HAR, screenshot or vault export is a permanent leak in
+          # public git history. .gitignore should prevent this; verify it did.
+          bad=$(git ls-files | grep -Ei '\.(har|sqlite|sqlite3|db)$|^evidence/|^artifacts/|^test-results/|trace.*\.(zip|json|network)$|\.vault(\.json)?$' || true)
+          if [ -n "$bad" ]; then
+            echo "PII-shaped files are tracked and must not be:"
+            echo "$bad"
+            exit 1
+          fi
+          echo "clean"
