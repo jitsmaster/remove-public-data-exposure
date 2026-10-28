@@ -57,6 +57,17 @@ export interface Target {
   tier: Tier
   leverage: Leverage
   authTier: AuthTier
+  /** 0 = crucial / statutorily enforceable, 1 = high priority, 2 = tail. */
+  priority: number
+  section: string | null
+  optOutUrl: string
+  source: 'badbool' | 'enforceable'
+  sourceCommit: string | null
+  legalBasis: string | null
+  automation: string | null
+  steps: string[] | null
+  flags: Record<string, boolean> | null
+  links: Array<{ text: string; url: string }> | null
   adapter?: string
   badboolVersion?: string
   notes?: string
@@ -79,6 +90,25 @@ export type JobStatus =
   | 'assisted-manual'
   | 'id-required'
   | 'failed'
+
+export const JOB_STATUSES: readonly JobStatus[] = [
+  'pending',
+  'searching',
+  'found',
+  'not-found',
+  'queued',
+  'awaiting-challenge',
+  'submitting',
+  'awaiting-confirm',
+  'submitted',
+  'verifying',
+  'removed',
+  're-listed',
+  'ignored',
+  'assisted-manual',
+  'id-required',
+  'failed',
+] as const
 
 export interface Job {
   id: string
@@ -152,4 +182,61 @@ export interface DevNudgeRequest {
 export interface ApiError {
   error: string
   detail?: string
+}
+
+// ---------------------------------------------------------------------------
+// API payloads
+// ---------------------------------------------------------------------------
+
+export interface TargetListResponse {
+  targets: Target[]
+  total: number
+}
+
+export interface JobListResponse {
+  jobs: Array<Job & { targetName: string; targetDomain: string; priority: number }>
+  total: number
+}
+
+export interface CreateJobRequest {
+  subjectHash: string
+  targetId: string
+  status?: JobStatus
+}
+
+export interface UpdateJobRequest {
+  status?: JobStatus
+  failureReason?: string | null
+  attempts?: number
+  nextCheckAt?: string | null
+}
+
+export interface RecordObservationRequest {
+  result: ObservationResult
+  fields?: string[]
+  sweepSource?: string
+}
+
+export interface RecordSubmissionRequest {
+  channel: 'form' | 'email'
+  confirmationRef?: string
+}
+
+/** Where the subject's exposure stands. The only number worth putting on a home screen. */
+export interface StatsResponse {
+  targets: {
+    total: number
+    enforceable: number
+    broker: number
+    byPriority: Record<string, number>
+  }
+  jobs: { total: number; byStatus: Record<string, number> }
+  /** Confirmed removed, versus everything discovered. Deliberately unflattering. */
+  progress: {
+    removed: number
+    submitted: number
+    awaitingHuman: number
+    reListed: number
+    notStarted: number
+  }
 }

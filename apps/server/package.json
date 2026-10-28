@@ -6,11 +6,13 @@
   "scripts": {
     "dev": "tsx watch src/index.ts",
     "start": "node --experimental-strip-types src/index.ts",
+    "seed": "tsx src/seed.ts",
     "typecheck": "tsc --noEmit",
     "vapid": "web-push generate-vapid-keys --json"
   },
   "dependencies": {
     "@hono/node-server": "^1.13.7",
+    "@rpde/registry": "workspace:*",
     "@rpde/shared": "workspace:*",
     "hono": "^4.6.16",
     "web-push": "^3.6.7"

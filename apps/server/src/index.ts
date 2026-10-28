@@ -16,6 +16,7 @@ import {
   listSubscriptions,
   sendPush,
 } from './push.ts'
+import { routes } from './routes.ts'
 
 const VERSION = '0.0.0'
 const pushReady = configurePush()
@@ -32,6 +33,18 @@ app.use(
   }),
 )
 
+// Request log: method, path, status, duration, origin. Never bodies or query strings —
+// the orchestrator must stay incapable of recording PII (DESIGN.md §5.2).
+app.use('*', async (c, next) => {
+  const started = performance.now()
+  await next()
+  const ms = (performance.now() - started).toFixed(1)
+  const origin = c.req.header('Origin') ?? '-'
+  const line = `[req] ${c.req.method} ${c.req.path} -> ${c.res.status} ${ms}ms origin=${origin}`
+  if (c.res.ok || c.res.status === 503) console.log(line)
+  else console.warn(line)
+})
+
 // Shared-secret gate. Tailscale keeps this service off the public internet; the token is
 // defence in depth for anything else on the tailnet.
 app.use('*', async (c, next) => {
@@ -46,7 +59,6 @@ app.use('*', async (c, next) => {
 })
 
 app.get('/health', (c) => {
-  getDb()
   return c.json<HealthResponse>({
     ok: true,
     service: 'rpde-orchestrator',
@@ -55,6 +67,9 @@ app.get('/health', (c) => {
     pushConfigured: pushReady,
   })
 })
+
+// Registry, jobs, observations, submissions, stats.
+app.route('/', routes)
 
 app.get('/push/vapid-public-key', (c) => {
   if (!pushReady) return c.json<ApiError>({ error: 'push not configured' }, 503)
