@@ -50,3 +50,6 @@ artifacts/
 
 # Local runtime data
 apps/server/data/
+
+# Identity terms for the local PII assertion — never commit these
+.pii-terms

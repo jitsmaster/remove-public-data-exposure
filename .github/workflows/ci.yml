@@ -39,10 +39,45 @@ jobs:
         run: |
           # A committed trace, HAR, screenshot or vault export is a permanent leak in
           # public git history. .gitignore should prevent this; verify it did.
-          bad=$(git ls-files | grep -Ei '\.(har|sqlite|sqlite3|db)$|^evidence/|^artifacts/|^test-results/|trace.*\.(zip|json|network)$|\.vault(\.json)?$' || true)
+          bad=$(git ls-files | grep -Ei '\.(har|sqlite|sqlite3|db)$|^evidence/|^artifacts/|^test-results/|trace.*\.(zip|json|network)$|\.vault(\.json)?$|\.pii-terms$' || true)
           if [ -n "$bad" ]; then
             echo "PII-shaped files are tracked and must not be:"
             echo "$bad"
             exit 1
           fi
           echo "clean"
+
+  pii-scan:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: pnpm/action-setup@v4
+        with:
+          version: 10
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 24
+          cache: pnpm
+
+      - run: pnpm install --frozen-lockfile
+
+      - name: Regenerate registry from the vendored snapshot
+        run: pnpm registry:data
+
+      - name: Seed and exercise the metadata store
+        run: |
+          pnpm seed
+          cd apps/server
+          node --input-type=module -e "
+          import { DatabaseSync } from 'node:sqlite';
+          const db = new DatabaseSync('./data/rpde.sqlite');
+          db.prepare('INSERT INTO subjects (hash, created_at) VALUES (?, ?)').run('test-hash', new Date().toISOString());
+          db.prepare('INSERT INTO jobs (id, subject_hash, target_id, status, attempts, created_at, updated_at) VALUES (?, ?, ?, ?, 0, ?, ?)').run('t1','test-hash','spokeo','found',new Date().toISOString(),new Date().toISOString());
+          db.prepare('INSERT INTO observations (job_id, observed_at, result, fields) VALUES (?, ?, ?, ?)').run('t1', new Date().toISOString(), 'found', '[\"name\",\"phone\"]');
+          db.close();
+          "
+
+      - name: Assert no personal data in the metadata store
+        run: node scripts/pii-scan.mjs
