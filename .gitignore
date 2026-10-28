@@ -1,0 +1,47 @@
+# Dependencies and build output
+node_modules/
+dist/
+build/
+.svelte-kit/
+.turbo/
+*.tsbuildinfo
+
+# Secrets and local config — never commit .env
+.env
+.env.*
+!.env.example
+
+# ---------------------------------------------------------------------------
+# PII / evidence artifacts.
+# This repo is PUBLIC. The whole point of the project is that this data must
+# not be exposed. A committed Playwright trace, HAR file, or screenshot is a
+# permanent PII leak in git history that no opt-out form can undo.
+# ---------------------------------------------------------------------------
+*.har
+trace*.zip
+trace*.json
+trace*.network
+*playwright-report*
+test-results/
+screenshots/
+evidence/
+artifacts/
+*.png
+*.jpeg
+*.pdf
+!docs/**/*.png
+
+# Local databases — job metadata should stay PII-free, but keep them out anyway
+*.db
+*.sqlite
+*.sqlite3
+
+# Vault exports
+*.vault
+*.vault.json
+
+# OS / editor
+.DS_Store
+.idea/
+.vscode/
+*.swp
